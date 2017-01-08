@@ -1,5 +1,5 @@
-# Unforget *table*
-### Final Project for Brown Unviersity's Designing Humanity Centered Robots
+# Unforget*table*
+### Final Project for Brown Unviersity's Designing Humanity Centered Robots by Alberta Devor
 
 Unforget*table* shows the overlap between two users locaiton history data. It is intended to be used as part of a larger physcial project in which two users standing at a table look at the projection of their overlapped location history on the tabletop. 
 
