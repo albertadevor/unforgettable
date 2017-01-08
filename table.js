@@ -10,7 +10,6 @@
 	setup();
 
 	 function getLocationGeo(lat, lng) {
-  		//const src = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latLng + "&key=" + key;
   		var src = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lng + '&key=MY_GOOGLE_GEOCODING_KEY';
   		var src = $.getJSON(src, function(data) {
   			for(var i=0; i<data.results[0].address_components.length; i++) {
@@ -51,11 +50,6 @@
 	function setup() {
 		// Initialize the map
 		map = L.map( 'map' ).setView([0,0], 2);
-		// L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-		// attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ. location-history-visualizer is open source and available <a href="https://github.com/theopolisme/location-history-visualizer">on GitHub</a>. Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors.',
-		// 	maxZoom: 18,
-		// 	minZoom: 2
-		// } ).addTo( map );
 
 		L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
 			attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

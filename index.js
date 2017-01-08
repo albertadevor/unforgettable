@@ -22,7 +22,6 @@
 	}
 
 	function getLocationGeo(lat, lng) {
-  		//const src = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latLng + "&key=" + key;
   		var src = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + lng + '&key=MY_GOOGLE_API_KEY';
   		var src = $.getJSON(src, function(data) {
   			for(var i=0; i<data.results[0].address_components.length; i++) {
@@ -87,11 +86,6 @@
     	for(var i=0; i< arr1.length; i++) {
     		//console.log(arr1[i]);
     		for(var j=0; j < arr2.length; j++) {
-    			// console.log(arr1[i] + ' and ' + arr2[j]);
-    			// var lat_dist = Math.abs(arr1[i][0] - arr2[j][0]);
-    			// var long_dist = Math.abs(arr1[i][1] - arr2[j][1]);
-    			// var total_dist = Math.sqrt((lat_dist*lat_dist) + (long_dist*long_dist));
-
 
     			if (arr1[i].toString() == arr2[j].toString()) {
     				overlap.push(arr1[i]);
@@ -113,12 +107,6 @@
 		var dropzone;
 		// Initialize the map
 		map = L.map( 'map' ).setView([0,0], 2);
-		// L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
-		// attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ. location-history-visualizer is open source and available <a href="https://github.com/theopolisme/location-history-visualizer">on GitHub</a>. Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors.',
-		// 	maxZoom: 16,
-		// 	minZoom: 1
-		// } ).addTo( map );
-
 		L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
 			attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
@@ -128,15 +116,14 @@
 		// Initialize the dropzone
 		dropzone = new Dropzone( document.body, {
 			url: '/',
-			previewsContainer: document.createElement( 'div' ), // >> /dev/null
+			previewsContainer: document.createElement( 'div' ),
 			clickable: false,
 			accept: function ( file, done ) {
 				waitSubmit(file);
-				dropzone.disable(); // Your job is done, buddy
+				dropzone.disable(); //done with uploading
 			}
 		} );
 
-		// For mobile browsers, allow direct file selection as well
 		$( '#file' ).change( function () {
 			waitSubmit( this.files[0] );
 			dropzone.disable();
@@ -160,7 +147,6 @@
 	}
 
 	function stageTwo ( file, name ) {
-		//heat = L.heatLayer( [], heatOptions ).addTo( map );
 
 		// First, change tabs
 		$( 'body' ).addClass( 'working' );
@@ -208,7 +194,6 @@
 					locations.push( [ Number( match[3] ), Number( match[2] ) ] );
 					match = KML_DATA_REGEXP.exec( data );
 				}
-
 				return locations;
 			}
 
@@ -279,7 +264,6 @@
 		$( 'body' ).removeClass( 'working' );
 		$( '#matching' ).addClass( 'hidden' );
 		$done.removeClass( 'hidden' );
-		//$( 'body' ).addClass( 'map-active' );
 
 		// Update count
 		$( '#numberProcessed' ).text( numberProcessed.toLocaleString() );
