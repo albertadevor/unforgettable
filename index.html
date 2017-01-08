@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unforget_table</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<div class="visualizer">
+
+    <!-- Shown before the heatmap is displayed -->
+    <div class="container">
+
+        <div class = "header">
+            <!-- Content displayed once processing complete -->
+            <div id="done" class="info-box hidden">
+                <h2 id = "locus"></h2>
+                <p>Successfully processed <span id="numberProcessed"></span> data points to find your overlapped locations.</p>
+                <input type="button" id="next" value="Next Overlap"/></input>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Intro, before data has been uploaded -->
+            <div id="intro" class="content-box">
+                <h2>Unforget<i>table</i></h2>
+                    <p>Welcome to <b>Unforget<i>table</i></b>, a tool that uses your <a href="https://google.com/locationhistory" target="_blank">Location History</a> to connect people using geo data.</p>
+                <div align = "left">
+                    <p> To Start, we’ll need a couple things from you: </p>
+                    <ol>
+                        <li>Download your location data from <a href="https://google.com/takeout" target="_blank">Google Takeout</a> (Note: Brown Students Users  cannot be on their university account)
+                        <li>Press “Select None” to deselect all, scroll down and select “Location History (JSON Format)” and click next.
+                        <li>Download and unzip your data!
+                        <li>In the “Takeout” Folder, Find “Location History”. Drag and drop <i>LocationHistory.json</i> from inside that folder onto this page.
+                    <ol>
+                    <p> Let the visualization begin!</p>
+                </div>
+
+                 <label id = "username_select">
+                 <p>Select User A or B (check the letter on your coaster!)</p>
+                  <select name="selected_name" required id = "selected_name">
+                    <option value="0" selected>Select a User &nbsp</option>
+                    <option value="mapUser1">User A </option>
+                    <option value="mapUser2">User B</option>
+                  </select>
+                </label>
+
+                <div class="upload-box">
+                    <p>Select your <b>LocationHistory.json</b> file directly or drop it onto the page:
+                        <center>
+                        <input class="file_upload" name="file" type="file" id="file" ></input>
+                        </center>
+                    </p>
+                    <input type="button" id="btnSubmit" value="Submit!"/> </input>
+                </div>
+            </div>
+
+            <!-- Shown in interim while processing is in progress -->
+            <div id="working" class="content-box hidden">
+                <h2>Processing data...</h2>
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <p><span id="currentStatus">Waking up...</span></p>
+                <p>This will take a while... sit back, get a cup of tea or something.</p>
+                <p><i>Why does it take so long?</i> Depending on how long Google's been tracking your location, you may have hundreds of thousands of [latitude, longitude] pairs, every one of which must be loaded, analyzed, and plotted. That's a lot of dots.</p>
+            </div>
+
+            <!-- Shown while we match with the other data points -->
+            <div id="matching" class="content-box hidden">
+                <h2>Matching points with the other user's data ...</h2>
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+                <p>This will take a while... sit back, get a cup of tea or something.</p>
+                <p><i>Why does it take so long?</i> Depending on how long Google's been tracking your location, you may have hundreds of thousands of [latitude, longitude] pairs, every one of which must be loaded, analyzed, and plotted. That's a lot of dots.</p>
+            </div>
+
+            <!-- shown if no overlap -->
+            <div id="no_overlap" class="content-box hidden">
+                <h2>No overlap!</h2>
+                <p>Unfortunately there was no overlap between you and your partner.</p>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- The map, populated by leaflet.js -->
+    <div id="map"></div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/3.8.4/dropzone.min.js"></script>
+<script src="lib/leaflet.heat.min.js"></script>
+<script src="lib/prettysize.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

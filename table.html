@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unforget_table</title>
+    <link rel="stylesheet" href="table.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<div class="visualizer">
+
+    <div class="container">
+        <!-- Content displayed once processing complete -->
+        <div id="done" class="info-box">
+            <p> Location match found in: </P>
+            <h2 id = "locus">Providence, RI</h2>
+        </div>
+
+         <div id="no_overlap" class="content-box hidden">
+            <h2>No overlap!</h2>
+            <p>Unfortunately there was no overlap between you and your partner.</p>
+        </div>
+    </div>
+    <!-- The map, populated by leaflet.js -->
+    <div id="map"></div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<script src="lib/prettysize.js"></script>
+<script src="table.js"></script>
+
+</body>
+</html>
