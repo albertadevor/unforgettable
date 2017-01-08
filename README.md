@@ -5,9 +5,9 @@ Unforget*table* shows the overlap between two users locaiton history data. It is
 
 However, the site can be accessed in a slightly modified version at https://unforgettable.city/ 
 
-![black and white table](http://68.media.tumblr.com/d375ee6707d366080a53ed5f2742b90e/tumblr_inline_oi6m5wJY831qbed5b_500.jpg, "table image")
+![black and white table](http://68.media.tumblr.com/d375ee6707d366080a53ed5f2742b90e/tumblr_inline_oi6m5wJY831qbed5b_500.jpg)
 
-![screenshot](http://68.media.tumblr.com/764d96939cc6710dbb2197ed74899f45/tumblr_inline_oi5m7hAadJ1qbed5b_500.png, "screenshot")
+![screenshot](http://68.media.tumblr.com/764d96939cc6710dbb2197ed74899f45/tumblr_inline_oi5m7hAadJ1qbed5b_500.png)
 
 ## Technologies Used
 
@@ -27,4 +27,4 @@ Final images and video related to the porject can be found [final media](http://
 
 Further writeups about other related projects I have completed for the course can be found on my class blog [class blog](http://albertarobots.tumblr.com/ "here").
 
-![table](http://68.media.tumblr.com/ec6499b215a9141b528709fd9512337d/tumblr_inline_oi6m5uEozP1qbed5b_500.jpg, "table")
+![table](http://68.media.tumblr.com/ec6499b215a9141b528709fd9512337d/tumblr_inline_oi6m5uEozP1qbed5b_500.jpg)
