@@ -2,7 +2,7 @@
 ### Final Project for Brown Unviersity's *Designing Humanity Centered Robots* (CS1951C)
 ### Created by Alberta Devor
 
-Unforget*table* shows the overlap between two users locaiton history data. It is intended to be used as part of a larger physcial project in which two users standing at a table look at the projection of their overlapped location history on the tabletop. 
+Unforget*table* shows the overlap between two users location history data. It is intended to be used as part of a larger physical project in which two users standing at a table look at the projection of their overlapped location history on the tabletop. 
 
 However, the site can be accessed in a slightly modified version at https://unforgettable.city/ 
 
