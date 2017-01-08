@@ -1,5 +1,6 @@
 # Unforget*table*
-### Final Project for Brown Unviersity's Designing Humanity Centered Robots (CS1951C) by Alberta Devor
+### Final Project for Brown Unviersity's *Designing Humanity Centered Robots* (CS1951C)
+### Created by Alberta Devor
 
 Unforget*table* shows the overlap between two users locaiton history data. It is intended to be used as part of a larger physcial project in which two users standing at a table look at the projection of their overlapped location history on the tabletop. 
 
@@ -14,6 +15,7 @@ However, the site can be accessed in a slightly modified version at https://unfo
 + **Leaflet.js** - rendering map
 + **Firebase** - web hosting and database
 + **Google Location API** - for labelling locations with appropriate names
++ **Rasberry Pi** - used for projecting map onto table
 + **The Basics** - HTML, CSS, JavaScript, jQuery
 
 ## Credits
