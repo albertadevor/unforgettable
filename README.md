@@ -25,7 +25,7 @@ A good portion of code in this repo is modified from [location-history-visualize
 ## Further Reading
 Further documentation for this project, including a more extensive writeup about the physical/hardware side of things can be found [here](http://albertarobots.tumblr.com/post/154447086408/unforgettable-final-project-documentation "final documentation").
 
-Final images and video related to the porject can be found [here](http://albertarobots.tumblr.com/post/154466951113/unforgettable-final-project-documentation "final media").
+Final images and video related to the project can be found [here](http://albertarobots.tumblr.com/post/154466951113/unforgettable-final-project-documentation "final media").
 
 Further writeups about other related projects I have completed for the course can be found on my class blog [here](http://albertarobots.tumblr.com/).
 
